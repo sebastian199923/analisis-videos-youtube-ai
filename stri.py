@@ -132,13 +132,13 @@ def procesar_video(url_video):
             docs = fragmentar_texto(transcripcion)
             st.session_state.docs = docs
             vectores = generar_vectorstore(
-                "AIzaSyAMyslo9ANcFTQtXQ7l9Rtg7V4PaCghzr4", docs)
+                "", docs)
             st.session_state.vectores = vectores
 
             st.write("✅ Vectorización completada")
 
             # Configura el modelo LLM
-            llm = configurar_llm("AIzaSyAMyslo9ANcFTQtXQ7l9Rtg7V4PaCghzr4")
+            llm = configurar_llm("")
             st.session_state.llm = llm
 
             st.write("✅ Conexión con el modelo LLM exitosa")
